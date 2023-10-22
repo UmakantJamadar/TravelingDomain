@@ -1,0 +1,38 @@
+package com.base;
+
+import java.io.FileInputStream;
+
+public class ReadExcelSheetData {
+
+	public static void main(String[] args) {
+FileInputStream fileinputstream = new FileInputStream("D:\\Java Selenium\\ReadExcelData.xlsx");
+		
+		Sheet sh =  WorkbookFactory.create(fileinputstream).getSheet("login");
+		
+		String uname = sh.getRow(1).getCell(1).getStringCellValue();
+		
+		System.out.println(uname);
+		
+		for(int i=0; i<sh.getLastRowNum(); i++)
+		{
+			int lastCellNum = sh.getRow(i).getLastCellNum();
+			
+			for(int j=0; j<lastCellNum; j++)
+			{
+				CellType ctype = sh.getRow(i).getCell(j).getCellType();
+				String values = "";
+				double intValues = 0;
+				if(ctype.toString().equalsIgnoreCase("string"))
+					values = sh.getRow(i).getCell(j).getStringCellValue();
+				else
+					intValues = sh.getRow(i).getCell(j).getNumericCellValue();
+				System.out.println(values);
+				System.out.println(intValues);
+				
+				
+			}
+			
+		}
+	}
+	}  
+	

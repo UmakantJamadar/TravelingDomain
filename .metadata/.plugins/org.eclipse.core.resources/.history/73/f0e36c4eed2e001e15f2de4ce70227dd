@@ -1,0 +1,14 @@
+package Java;
+
+public class SingleDimentionalArray {
+	
+	public static void main( String[] args) {
+		
+		// declaration of array 
+		int a[]= new int[5];
+	    
+		
+		
+	}
+
+}

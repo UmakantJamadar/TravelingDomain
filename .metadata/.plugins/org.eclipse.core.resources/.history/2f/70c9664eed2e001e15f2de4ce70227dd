@@ -1,0 +1,22 @@
+package Java;
+
+public class ArithmaticOperator {
+	
+	public static void main (String[]args ) {
+		
+		int a=6;
+		int b=8;
+		
+		a=a+b;    /// a=6+8=14
+		b=a-b; // b = 14-8=6
+		
+		
+		
+		a=a-b;// a= 14-6= 8
+		// final value of a = 8 and b= 6
+		System.out.println("After swapping value of a is " + a);
+		System.out.println("After swapping value of b is " +b );
+		
+	}
+
+}
